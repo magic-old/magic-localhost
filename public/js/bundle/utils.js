@@ -1,8 +1,3 @@
-'use strict';
-var utils = {};
-
-utils.helloWorld = function helloWorld() {
+export function helloWorld() {
   console.log('hello world');
 }
-
-module.exports = utils;

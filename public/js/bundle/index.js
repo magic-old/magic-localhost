@@ -1,4 +1,2 @@
-'use strict';
-var utils = require('./utils');
-
-utils.helloWorld();
+import {helloWorld} from './utils';
+helloWorld();

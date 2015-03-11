@@ -2,5 +2,8 @@
   "name": "magic-localhost",
   "version": "0.0.1",
   "private": true,
-  "main"   : "./H.js"
+  "main": "./H.js",
+  "dependencies": {
+    "babelify": "^5.0.4"
+  }
 }
