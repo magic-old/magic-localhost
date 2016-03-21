@@ -21,8 +21,14 @@ lint-fix:
 clean:
 	@./cli.sh clean
 
+debug:
+	@./cli.sh debug
+
+logs:
+	@./cli.sh logs
+
 rm:
-	@./cli.sh rm
+	@./cli.sh docker-rm
 
 run:
 	@./cli.sh run
