@@ -27,5 +27,8 @@ rm:
 run:
 	@./cli.sh run
 
+ip:
+	@./cli.sh ip
+
 help:
 	@./cli.sh help

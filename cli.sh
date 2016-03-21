@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 
 NODE_BIN=node_modules/.bin
-CONTAINER_PORT=5000
 CONTAINER_NAME=magic-localhost
 IMAGE_TAG=magic:localhost
 
 OUT_DIR=out
 
 function build() {
-  echo "start building docker container"
+  echo "start building $CONTAINER_NAME docker container"
 
   docker build \
   --tag $IMAGE_TAG \
-  --build-arg="PORT=$CONTAINER_PORT" \
     . # dot!
 
   echo "finished building docker container"
@@ -24,11 +22,15 @@ function run() {
   echo "start docker container"
   docker run \
     --name $CONTAINER_NAME \
-    --publish 5000:5000 \
     --detach \
     $IMAGE_TAG
 }
 
+function ip() {
+  ip=$(python ./bin/ip.py $CONTAINER_NAME)
+  echo "container $CONTAINER_NAME started with ip: $ip"
+  echo $ip > ./IP.txt
+}
 function rm() {
   echo "delete docker container"
   docker rm -f $CONTAINER_NAME
