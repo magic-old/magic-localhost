@@ -2,7 +2,6 @@
 
 NODE_BIN=node_modules/.bin
 CONTAINER_NAME=magic-localhost
-IMAGE_TAG=magic:localhost
 JS_ROOT_DIR=src/js
 
 OUT_DIR=out
@@ -61,7 +60,7 @@ function run() {
   docker run \
     --name $CONTAINER_NAME \
     --detach \
-    $IMAGE_TAG
+    $CONTAINER_NAME
 }
 
 function ip() {
