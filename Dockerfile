@@ -12,7 +12,4 @@ ADD node_modules ./node_modules/
 
 RUN ls -l .
 
-ARG PORT
-
-EXPOSE ${PORT}
 CMD ["node", "index.js"]
