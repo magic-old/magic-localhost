@@ -1,2 +1,2 @@
-import {helloWorld} from './utils';
+import { helloWorld } from './utils';
 helloWorld();
