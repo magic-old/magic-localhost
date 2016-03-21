@@ -8,4 +8,6 @@ Object.keys(config).forEach(
     app.set(key, config[key])
 );
 
-Magic(app, __dirname);
+app.set('cwd', __dirname);
+
+Magic(app);
