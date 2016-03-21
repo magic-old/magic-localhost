@@ -7,9 +7,9 @@ MAINTAINER Wizards & Witches <dev@wiznwit.com>
 ENV REFRESHED_AT 2016-21-02
 
 WORKDIR /srv
-ADD src/ ./
-ADD node_modules ./node_modules/
 
-RUN ls -l .
+COPY out/ .
+
+COPY node_modules ./node_modules/
 
 CMD ["node", "index.js"]
