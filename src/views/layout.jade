@@ -10,4 +10,8 @@ html
     div#content
       block content
 
-    script#load-js(src='/js/load.js')
+    script.
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '/js/main.js';
+      d.body.appendChild(s);
