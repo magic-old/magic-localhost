@@ -1,3 +1,5 @@
+CLI=./node_modules/magic-root/bin/cli.sh
+
 .PHONY: \
 	all \
 	build \
@@ -10,31 +12,31 @@
 all: help
 
 build:
-	@./cli.sh build
+	@${CLI} build
 
 lint:
-	@./cli.sh lint
+	@${CLI} lint
 
 lint-fix:
-	@./cli.sh lint-fix
+	@${CLI} lint-fix
 
 clean:
-	@./cli.sh clean
+	@${CLI} clean
 
 debug:
-	@./cli.sh debug
+	@${CLI} debug
 
 logs:
-	@./cli.sh logs
+	@${CLI} logs
 
 rm:
-	@./cli.sh docker-rm
+	@${CLI} docker-rm
 
 run:
-	@./cli.sh run
+	@${CLI} run
 
 ip:
-	@./cli.sh ip
+	@${CLI} ip
 
 help:
-	@./cli.sh help
+	@${CLI} help
